@@ -8,20 +8,15 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/hello" 
-        android:textSize="45pi"/>
+        android:textSize="45dp"/>
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="proba" />
-    
 
 
     <Button
         android:id="@+id/btnUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="user name" />
+        android:text="@string/username" />
 
 
 
@@ -30,6 +25,6 @@
         android:id="@+id/btnKanali"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="kanali" />
+        android:text="@string/kanali" />
 
 </LinearLayout>
