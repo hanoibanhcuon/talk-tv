@@ -3,6 +3,8 @@
 
     <string name="hello">Hello World, TalkTVstart!</string>
     <string name="app_name">TalkTV</string>
+    <string name="username">TalkTV</string>
+    <string name="kanali">TalkTV</string>
 
     <string-array name="expandable_list_sample_action">
         <item>RTL</item>
