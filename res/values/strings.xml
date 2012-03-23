@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, TalkTVstart!</string>
+    <string name="app_name">TalkTV</string>
+
+    <string-array name="expandable_list_sample_action">
+        <item>RTL</item>
+        <item>Larin izbor</item>
+        <item>Vijesti</item>
+        <item>In magazin</item>
+    </string-array>
+</resources>
