@@ -27,14 +27,16 @@ public class TalkTVstart extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				txtGreet.setText("dogodio se neparni klik");				
+				txtGreet.setText("dogodio se klik username-a");				
 			}
 		});
         btnKanali.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				txtGreet.setText("dogodio se parni klik");				
+				txtGreet.setText("dogodio se klik kanala");
+//				ExpandableListKanal noviView = new ExpandableListKanal("RTL", "trenutna", "sljedeca");
+//				setContentView(noviView.getExpandableListView());
 			}
 		});
     }
