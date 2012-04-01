@@ -8,24 +8,32 @@
         android:id="@+id/txtGreet"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello" 
-        android:textSize="45dp"/>
-
-
+        android:text="@string/hello"
+        android:textSize="45dp" />
 
     <Button
         android:id="@+id/btnUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:text="@string/username" />
-
-
-
 
     <Button
         android:id="@+id/btnKanali"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/kanali" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Postavke" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/kraj" />
 
 </LinearLayout>

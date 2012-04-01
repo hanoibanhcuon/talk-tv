@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="hr.fer.asc"
+    package="com.hr.fer.asc"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -17,13 +17,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+         <activity android:name="com.hr.fer.asc.ExpandableListEmisija">
+             
+         </activity>
+          
         <activity
-            android:name=".ExpandableListKanal"
+            android:name="com.hr.fer.asc.ExpandableListKanal"
             android:label="@string/kanali" >
-            <intent-filter>
-                <action android:name="hr.fer.asc.EXPANDABLELISTKANAL" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
+         
         </activity>
         </application>
 

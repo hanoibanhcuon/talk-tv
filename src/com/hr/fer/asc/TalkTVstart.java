@@ -1,6 +1,9 @@
-package hr.fer.asc;
+package com.hr.fer.asc;
+
+
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -12,6 +15,7 @@ public class TalkTVstart extends Activity {
 	
 	Button btnUsername; 
 	Button btnKanali;
+	Button btnLista;
 	TextView txtGreet;
 	
     @Override
@@ -22,9 +26,12 @@ public class TalkTVstart extends Activity {
         btnUsername = (Button) findViewById(R.id.btnUser);
         btnKanali = (Button) findViewById(R.id.btnKanali);
         txtGreet = (TextView) findViewById(R.id.txtGreet);
+   
         
         btnUsername.setOnClickListener(new OnClickListener() {
-			
+		
+        	
+        	
 			@Override
 			public void onClick(View v) {
 				txtGreet.setText("dogodio se klik username-a");				
@@ -35,9 +42,14 @@ public class TalkTVstart extends Activity {
 			@Override
 			public void onClick(View v) {
 				txtGreet.setText("dogodio se klik kanala");
-//				ExpandableListKanal noviView = new ExpandableListKanal("RTL", "trenutna", "sljedeca");
-//				setContentView(noviView.getExpandableListView());
+				//ExpandableListKanal noviView = new ExpandableListKanal("RTL", "trenutna", "sljedeca");
+				//setContentView(noviView.getExpandableListView());
+				 Intent myIntent = new Intent(getApplicationContext(), ExpandableListEmisija.class);
+		         startActivity(myIntent);
+			       
 			}
 		});
+        
+      
     }
 }
