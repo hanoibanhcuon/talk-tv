@@ -1,4 +1,6 @@
-package hr.fer.asc;
+package com.hr.fer.asc;
+
+import com.hr.fer.asc.R;
 
 import android.app.ListActivity;
 import android.os.Bundle;

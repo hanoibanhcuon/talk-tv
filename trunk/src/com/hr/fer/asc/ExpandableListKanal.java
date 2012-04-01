@@ -1,8 +1,11 @@
 /**
  * 
  */
-package hr.fer.asc;
+package com.hr.fer.asc;
 
+import com.hr.fer.asc.R;
+
+import android.R.*;
 import android.app.ExpandableListActivity;
 import android.os.Bundle;
 import android.view.ContextMenu;

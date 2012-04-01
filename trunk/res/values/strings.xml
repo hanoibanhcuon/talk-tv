@@ -12,4 +12,6 @@
         <item>Vijesti</item>
         <item>In magazin</item>
     </string-array>
+        <string name="Postavke">Postavke</string>
+        <string name="kraj">Kraj</string>
 </resources>
