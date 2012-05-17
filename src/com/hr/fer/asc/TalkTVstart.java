@@ -13,9 +13,11 @@ import android.widget.TextView;
 public class TalkTVstart extends Activity {
     /** Called when the activity is first created. */
 	
-	Button btnUsername; 
-	Button btnKanali;
-	Button btnLista;
+	Button btn1P; 
+	Button btn2P;
+	Button btn3P;
+	Button btn4P;
+	
 	TextView txtGreet;
 	
     @Override
@@ -23,33 +25,55 @@ public class TalkTVstart extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
-        btnUsername = (Button) findViewById(R.id.btnUser);
-        btnKanali = (Button) findViewById(R.id.btnKanali);
+        btn1P = (Button) findViewById(R.id.btn1P);
+        btn2P = (Button) findViewById(R.id.btn2P);
+        btn3P = (Button) findViewById(R.id.btn3P);
+        btn4P = (Button) findViewById(R.id.btn4P);
+        
         txtGreet = (TextView) findViewById(R.id.txtGreet);
    
         
-        btnUsername.setOnClickListener(new OnClickListener() {
+        btn1P.setOnClickListener(new OnClickListener() {
 		
         	
         	
 			@Override
 			public void onClick(View v) {
-				txtGreet.setText("dogodio se klik username-a");				
+				 Intent myIntent = new Intent(getApplicationContext(), ExpandableListEmisija.class);
+				 myIntent.putExtra("kanal", "program001");
+				 startActivity(myIntent);			
 			}
 		});
-        btnKanali.setOnClickListener(new OnClickListener() {
+        btn2P.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				txtGreet.setText("dogodio se klik kanala");
+		
 				//ExpandableListKanal noviView = new ExpandableListKanal("RTL", "trenutna", "sljedeca");
 				//setContentView(noviView.getExpandableListView());
 				 Intent myIntent = new Intent(getApplicationContext(), ExpandableListEmisija.class);
-		         startActivity(myIntent);
+				 myIntent.putExtra("kanal", "program002");
+				 startActivity(myIntent);
 			       
 			}
 		});
+  btn3P.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+		
+				//ExpandableListKanal noviView = new ExpandableListKanal("RTL", "trenutna", "sljedeca");
+				//setContentView(noviView.getExpandableListView());
+				 Intent myIntent = new Intent(getApplicationContext(), ExpandableListEmisija.class);
+				 myIntent.putExtra("kanal", "program003");
+				 startActivity(myIntent);
+			       
+			}
+		});
+       
+
+   
+       
         
-      
     }
 }

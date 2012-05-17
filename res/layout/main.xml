@@ -3,35 +3,36 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
-
+
     <TextView
         android:id="@+id/txtGreet"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:text="@string/hello"
         android:textSize="45dp" />
 
     <Button
-        android:id="@+id/btnUser"
+        android:id="@+id/btn1P"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="@string/username" />
+        android:text="@string/PrviProgram" />
 
     <Button
-        android:id="@+id/btnKanali"
+        android:id="@+id/btn2P"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/kanali" />
+        android:text="@string/DrugiProgram" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btn3P"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Postavke" />
+        android:text="@string/TreciProgram" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn4P"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/kraj" />

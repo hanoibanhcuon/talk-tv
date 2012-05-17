@@ -1,0 +1,10 @@
+Program:PrivatniTv
+001-00:00-09:00-Emisija1
+002-09:00-11:30-Emisija2
+003-11:45-12:00-Emisija3
+004-12:00-12:40-Emisija4
+005-13:00-17:00-Emisija5
+006-17:00-20:00-Emisija6
+006-20:00-24:00-Emisija7
+
+
