@@ -27,6 +27,8 @@
             android:label="@string/kanali" >
          
         </activity>
+        
+     
         </application>
 
 </manifest>

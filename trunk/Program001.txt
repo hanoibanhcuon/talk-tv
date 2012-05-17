@@ -1,0 +1,9 @@
+Program:MojTV1
+001-00:00-09:00-Jutarnji program
+002-09:00-09:30-Vijesti
+003-09:45-12:00-Film1
+004-12:00-12:40-Dnevnik
+005-13:00-17:00-Popodne
+006-17:00-20:00-Predvecer
+006-20:00-24:00-Navecer
+

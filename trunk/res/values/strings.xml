@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="hello">Hello World, TalkTVstart!</string>
+    <string name="hello">Dobrodošli u TalkTVstart!</string>
     <string name="app_name">TalkTV</string>
-    <string name="username">user name</string>
-    <string name="kanali">kanali</string>
+    <string name="PrviProgram">MojTv1</string>
+    <string name="DrugiProgram">MojTV2</string>
 
     <string-array name="expandable_list_sample_action">
         <item>RTL</item>
@@ -12,6 +12,7 @@
         <item>Vijesti</item>
         <item>In magazin</item>
     </string-array>
-        <string name="Postavke">Postavke</string>
+        <string name="TreciProgram">PrivatniTV</string>
         <string name="kraj">Kraj</string>
+        <string name="kanali">kanali</string>
 </resources>

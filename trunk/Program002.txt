@@ -1,0 +1,9 @@
+Program:MojTV2
+001-00:00-09:00-Jutarnji program2
+002-09:00-09:30-Vijesti2
+003-09:45-12:00-Film12
+004-12:00-12:40-Dnevnik2
+005-13:00-17:00-Popodne2
+006-17:00-20:00-Predvecer2
+006-20:00-24:00-Navecer2
+
