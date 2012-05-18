@@ -1,29 +1,31 @@
 package com.hr.fer.asc;
  
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.lang.reflect.Field;
+import com.hr.fer.asc.R;
 
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.AdapterView.OnItemClickListener;
  
 /**
  * Activity kojem prikazujemo popis svih kanala
- * Hardkodirani su u kod radi sigurnosti, ali može se napraviti da se èitaju iz datoteke
+ * Hardkodirani su u kod radi sigurnosti, ali moï¿½e se napraviti da se ï¿½itaju iz datoteke
  * Klikom se otvara raspored zadanog kanala
  * @author TalkTV
  *
  */
+
+
+	/**
+	 * Element u kojem prikazujemo kanal sa trenutnom i sljedeÄ‡om emisijom, a daje moguÄ‡nost pritiska naziva kanala
+	 * i prebacivanje na neku drugu akivnost (konkretno tv raspored tog kanala).
+	 * 
+	 */
 public class ExpandableListKanal extends ListActivity {
  
 	static final String[] KANALI = new String[] { "Kanali", "MojTv1", "MojTv2", "PrivatniTV",
@@ -64,10 +66,6 @@ public class ExpandableListKanal extends ListActivity {
 //	    	} 	
 		
 		
-		
-		
-		
-		
 		 //spoji kanale s Popisom, pomocu mape, a ne ovako hardcode
 		setListAdapter(new ArrayAdapter<String>(this, R.layout.probalista,KANALI));
  
@@ -80,11 +78,10 @@ public class ExpandableListKanal extends ListActivity {
 		listView.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-	
 				/*
-				 * Hardcodirane šifre za više programa
-				 * Može se napraviti da ne bude hardcode nego da se èita iz datoteke
-				 * i sprema u HashMap ili nešto slièno
+				 * Hardcodirane ï¿½ifre za viï¿½e programa
+				 * Moï¿½e se napraviti da ne bude hardcode nego da se ï¿½ita iz datoteke
+				 * i sprema u HashMap ili neï¿½to sliï¿½no
 				 */
 				String sifra = null;
 				String provjera=((TextView) view).getText().toString();
@@ -104,8 +101,8 @@ public class ExpandableListKanal extends ListActivity {
 				if (sifra!="preskoci") 
 					if (sifra=="Kraj") {finish();}
 					else{
-						/*zvanje sljedeæeg porozora s prikazom kanala
-						 * i programom od sadašnje epizode do današnje
+						/*zvanje sljedeï¿½eg porozora s prikazom kanala
+						 * i programom od sadaï¿½nje epizode do danaï¿½nje
 						 */
 				 Intent myIntent2 = new Intent(getApplicationContext(), ExpandableListEmisija.class);
 				 myIntent2.putExtra("kanal", sifra);
@@ -113,10 +110,5 @@ public class ExpandableListKanal extends ListActivity {
 			
 			}
 		});
-		
-		
-		
- 
 	}
- 
 }

@@ -1,22 +1,16 @@
 package com.hr.fer.asc;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.reflect.Field;
 import java.text.DateFormat;
 import java.util.ArrayList;
-import java.util.Currency;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
-
 import com.hr.fer.asc.Emisija;
-
-import com.hr.fer.asc.R;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -24,7 +18,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 /**
  * Activity u kojem prikazujemo program od trenutnog vremena do kraja dana
@@ -74,7 +67,7 @@ public class ExpandableListEmisija extends Activity  {
 	        }
 	        int drawableId = 0;
 	        /*SLjedeci dio oznacuje citanje programa iz zasebnih datoteki za taj dan
-	         * Datoteke moraju biti spremljene u drawable folderu u obliku program 001 
+	         * Datoteke moraju biti spremljene u drawable folderu u obliku 'program 001' 
 	         * i po zadanom formatu
 	         * 
 	         */
@@ -117,7 +110,7 @@ public class ExpandableListEmisija extends Activity  {
     	} 
         
         /*
-         * DIo gdje ispisujemo program
+         * Dio gdje ispisujemo program
          */
         //Naslov programa
         TextView naslov = (TextView) findViewById(R.id.textImePrograma); 
@@ -139,7 +132,7 @@ public class ExpandableListEmisija extends Activity  {
         	if ((temp.getVrijemeKraja()>trenVrijeme) && (temp.getVrijemePocetka()<trenVrijeme)) {
         		trenutnaEmisija=temp.getImeEmisije();
         		trenutniKanal=imePrograma;
-        		porukaNaZid="Upravo gledam "+trenutnaEmisija+ " na " + trenutniKanal + " !! Moraš to vidjeti! Pridruži mi se ODMAH!";
+        		porukaNaZid="Upravo gledam "+trenutnaEmisija+ " na " + trenutniKanal;
         		
         	}
           	
