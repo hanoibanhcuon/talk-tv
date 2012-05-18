@@ -1,5 +1,10 @@
 package com.hr.fer.asc;
-
+/**
+ * Pomocna klasa za program. Sadrzi podatke o emisiji, 
+ * kada pocinje kada zavrsava i kako se zove
+ * @author TalkTV
+ *
+ */
 public class Emisija {
 
 	private int redniBroj;
