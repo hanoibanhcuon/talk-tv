@@ -2,39 +2,47 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
-
+    android:background="@drawable/zpozadina1"
+    android:orientation="vertical" android:gravity="center_horizontal">
+
     <TextView
         android:id="@+id/txtGreet"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical|center_horizontal"
         android:text="@string/hello"
+        android:textColor="#000000"
         android:textSize="45dp" />
-
+
     <Button
         android:id="@+id/btn1P"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/PrviProgram" />
-
+        android:layout_gravity="center_vertical"
+        android:text="@string/Pregled_kanala"
+        android:textSize="25dp" />
+
     <Button
         android:id="@+id/btn2P"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/DrugiProgram" />
-
+        android:text="@string/Nabavi_program"
+        android:textSize="25dp" />
+
     <Button
         android:id="@+id/btn3P"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/TreciProgram" />
-
+        android:text="@string/Facebook"
+        android:textSize="25dp"
+        android:onClick="loginAndPostToWall" />
+
     <Button
         android:id="@+id/btn4P"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/kraj" />
+        android:text="@string/kraj"
+        android:textSize="25dp" />
 
 </LinearLayout>

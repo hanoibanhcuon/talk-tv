@@ -3,8 +3,8 @@
 
     <string name="hello">Dobrodošli u TalkTVstart!</string>
     <string name="app_name">TalkTV</string>
-    <string name="PrviProgram">MojTv1</string>
-    <string name="DrugiProgram">MojTV2</string>
+    <string name="Pregled_kanala">Pregledaj Kanale</string>
+    <string name="Nabavi_program">Sinkroniziraj</string>
 
     <string-array name="expandable_list_sample_action">
         <item>RTL</item>
@@ -12,7 +12,7 @@
         <item>Vijesti</item>
         <item>In magazin</item>
     </string-array>
-        <string name="TreciProgram">PrivatniTV</string>
+        <string name="Facebook">Korisnik</string>
         <string name="kraj">Kraj</string>
         <string name="kanali">kanali</string>
 </resources>

@@ -26,8 +26,22 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
+/**
+ * Activity u kojem prikazujemo program od trenutnog vremena do kraja dana
+ * Imamo gumbe za nazad i za podijelit na facebook
+ * Podatke uzimamo iz datoteke imenom programXXX ovisno o potrebi
+ * taj podatak predajemo iz prethodnog activity
+ * 
+ * @author TalkTV
+ *
+ */
 public class ExpandableListEmisija extends Activity  {
+	
+	private String trenutniKanal;
+	private String trenutnaEmisija;
+	private String porukaNaZid;
+	
+	
 
     /** Called when the activity is first created. */
     public void onCreate(Bundle savedInstanceState) {
@@ -59,6 +73,11 @@ public class ExpandableListEmisija extends Activity  {
 	        value = (extras.getString("kanal"));
 	        }
 	        int drawableId = 0;
+	        /*SLjedeci dio oznacuje citanje programa iz zasebnih datoteki za taj dan
+	         * Datoteke moraju biti spremljene u drawable folderu u obliku program 001 
+	         * i po zadanom formatu
+	         * 
+	         */
 	        try {
 	            Class res = R.drawable.class;
 	            Field field = res.getField(value);
@@ -91,13 +110,15 @@ public class ExpandableListEmisija extends Activity  {
 		   	}		
    	
 		   	is.close();
-	
 		
-   	
         } catch (IOException e) {
         	// TODO Auto-generated catch block
         	//e.printStackTrace(); 
     	} 
+        
+        /*
+         * DIo gdje ispisujemo program
+         */
         //Naslov programa
         TextView naslov = (TextView) findViewById(R.id.textImePrograma); 
         //Popis programa
@@ -111,7 +132,17 @@ public class ExpandableListEmisija extends Activity  {
         	String currentTime = DateFormat.getTimeInstance(DateFormat.SHORT, Locale.FRANCE).format(new Date());
           	currentTime=currentTime.split(" ")[0].replaceAll(":", "");	
           	int trenVrijeme=Integer.parseInt(currentTime);
-        	Emisija temp=ProgramKanala.get(i);
+        	
+          	Emisija temp=ProgramKanala.get(i);
+          	
+          	
+        	if ((temp.getVrijemeKraja()>trenVrijeme) && (temp.getVrijemePocetka()<trenVrijeme)) {
+        		trenutnaEmisija=temp.getImeEmisije();
+        		trenutniKanal=imePrograma;
+        		porukaNaZid="Upravo gledam "+trenutnaEmisija+ " na " + trenutniKanal + " !! Moraš to vidjeti! Pridruži mi se ODMAH!";
+        		
+        	}
+          	
         	if ((temp.getVrijemeKraja()>trenVrijeme))
     		{vri.append(temp.getStrVrijemePocetka()+ "\n" );
     		emi.append(temp.getImeEmisije() + "\n" );
@@ -123,11 +154,21 @@ public class ExpandableListEmisija extends Activity  {
     	vrijeme.setText(vri);
     	nazivEmisije.setText(emi);
        	naslov.setText(imePrograma);  
-       	
-       	
-        Button next = (Button) findViewById(R.id.button1);       
+       	Button podijeli = (Button) findViewById(R.id.buttonPodijeli);       
         
-        next.setOnClickListener(new View.OnClickListener() {
+        podijeli.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                //ucini nesto, posalji na fejs
+            	Intent postOnFacebookWallIntent = new Intent(getApplicationContext(), Connect.class);
+				postOnFacebookWallIntent.putExtra("facebookMessage", porukaNaZid );
+				startActivity(postOnFacebookWallIntent);
+            }
+         
+        });
+       	
+        Button nazad = (Button) findViewById(R.id.button1);       
+        
+        nazad.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 
                 finish();
