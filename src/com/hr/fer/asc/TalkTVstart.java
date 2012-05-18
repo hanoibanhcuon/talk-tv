@@ -9,10 +9,19 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
-
+/**
+ * Glavni Activity, u njemu biramo opcije
+ * Pregled kanala pokazuje kanale
+ * Sinkroniziraj skida program za danas (ili automatski)
+ * Korisnik postavlja facebook account
+ * Kraj zavr�ava aplikaciju
+ * @author TalkTV
+ *
+ */
 public class TalkTVstart extends Activity {
     /** Called when the activity is first created. */
 	
+
 	Button btn1P; 
 	Button btn2P;
 	Button btn3P;
@@ -33,28 +42,28 @@ public class TalkTVstart extends Activity {
         txtGreet = (TextView) findViewById(R.id.txtGreet);
    
         
+   
+       
+        
+        
+        //gumbi
         btn1P.setOnClickListener(new OnClickListener() {
 		
         	
         	
 			@Override
 			public void onClick(View v) {
-				 Intent myIntent = new Intent(getApplicationContext(), ExpandableListEmisija.class);
-				 myIntent.putExtra("kanal", "program001");
-				 startActivity(myIntent);			
+				 Intent myIntent = new Intent(getApplicationContext(), ExpandableListKanal.class);
+					// myIntent.putExtra("kanal", "program001");
+					 startActivity(myIntent);		
 			}
 		});
         btn2P.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-		
-				//ExpandableListKanal noviView = new ExpandableListKanal("RTL", "trenutna", "sljedeca");
-				//setContentView(noviView.getExpandableListView());
-				 Intent myIntent = new Intent(getApplicationContext(), ExpandableListEmisija.class);
-				 myIntent.putExtra("kanal", "program002");
-				 startActivity(myIntent);
-			       
+				Downloader.Sinkroniziraj() ;//popravi ovo
+//			       
 			}
 		});
   btn3P.setOnClickListener(new OnClickListener() {
@@ -62,18 +71,24 @@ public class TalkTVstart extends Activity {
 			@Override
 			public void onClick(View v) {
 		
-				//ExpandableListKanal noviView = new ExpandableListKanal("RTL", "trenutna", "sljedeca");
-				//setContentView(noviView.getExpandableListView());
-				 Intent myIntent = new Intent(getApplicationContext(), ExpandableListEmisija.class);
-				 myIntent.putExtra("kanal", "program003");
-				 startActivity(myIntent);
-			       
-			}
+			
+				Intent logirajse = new Intent(getApplicationContext(), Connect.class);
+				logirajse.putExtra("facebookMessage", "Skinuo sam novu aplikaciju: TalkTV" );
+				startActivity(logirajse);		}
 		});
        
 
-   
+  btn4P.setOnClickListener(new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+	
+			   System.runFinalizersOnExit(true);
+			   System.exit(0);
+			   }
+	});
        
         
     }
+  
 }
